@@ -61,5 +61,4 @@ df<-df[,-1]
 df2<-aggregate(. ~label+subject,df,mean)
 df2<-df2[order(df2$label,df2$subject),]
 write.table(df2,file="tidy.txt",row.names = FALSE)
-write.table(names(df2), file="codebook.md", quote=FALSE,
-            row.names=FALSE, col.names=FALSE, sep="\t")
+write.table(names(df2), file="codebook.md", quote=FALSE, row.names=FALSE, col.names=FALSE, sep="\t")
